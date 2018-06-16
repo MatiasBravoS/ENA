@@ -30,13 +30,13 @@
              
             try{
     Class.forName("com.mysql.jdbc.Driver");
-    Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/java","root","");
-    String query="SELECT * FROM user WHERE user.username='"+u+"' and user.password='"+p+"'";
+    Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/requerimientos","root","");
+    String query="SELECT * FROM user WHERE user.user='"+u+"' and user.pass='"+p+"'";
    Statement st=conn.createStatement();
     ResultSet rs=st.executeQuery(query);
     rs.next();
-    String userSql=  rs.getString("username"); 
-    String passSql=  rs.getString("password"); 
+    String userSql=  rs.getString("user"); 
+    String passSql=  rs.getString("pass"); 
     conn.close();
         if(u.equals(userSql) && p.equals(passSql)){
                  getServletContext().getRequestDispatcher("/menu.jsp").forward(request, response);
