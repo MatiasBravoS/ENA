@@ -20,5 +20,30 @@
             <p><input name="btnIngresar" type="submit" value="Ingresar"</p>
             
         </form>
+        <%
+            try{
+                int numero=Integer.parseInt(request.getParameter("n"));
+                switch(numero){
+                    case 1:
+                        out.println("Ingrese un usuario y una contraseña");
+                        break;
+                         case 2:
+                        out.println("Ingrese un usuario");
+                        break;
+                         case 3:
+                        out.println("Ingrese una contraseña");
+                        break;
+                        case 4:
+                        out.println("Datos Incorrectos");
+                        break;
+                }
+             
+            }
+            catch(Exception e){
+                
+            }
+
+ 
+        %>
     </body>
 </html>
