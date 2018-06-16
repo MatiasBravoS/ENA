@@ -9,9 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="css/style.css">
         <title>JSP Page</title>
     </head>
     <body>
+    <center>
+        <div class="index">
         <form method="POST" action="enviarDatos.jsp">
             <h1>Autentificación</h1>
             <p>Usuario: <input name="txtUsuario" type="text"></p>
@@ -20,6 +23,7 @@
             <p><input name="btnIngresar" type="submit" value="Ingresar"</p>
             
         </form>
+           
         <%
             try{
                 int numero=Integer.parseInt(request.getParameter("n"));
@@ -45,5 +49,7 @@
 
  
         %>
+         </div>
+    </center>
     </body>
 </html>
